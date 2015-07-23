@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>To buy:</title>
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/main.html">
+	<link rel="stylesheet" href="css/main.css">
 	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
 	<script src="http://code.jquery.com/jquery.min.js"></script>
 	<script src="js/app.js"></script>
@@ -14,10 +14,29 @@
 		<div class="header-text">
 			<h1>To buy:</h1>
 		</div>
-		<div class="entry-box">
-			<p>What do you need?</p>
+		<div class="entry-container">
+			<div class="entry-box">
+				<p>What do you need?</p>
+			</div>
+			<div class="add-icon"><img src="img/add.png" alt="add icon" width="17px"></div>
 		</div>
-		<span class="add-icon"><img src="img/add.png" alt="add icon"></span>
 	</header>
+	<section class="fridge-list">
+		<div class="entered-item">
+			<div class="delete-icon"><img src="img/delete.png" alt="delete icon" width="17px"></div>
+			<div class="entered-item-text"><p>Eggs</p></div>
+			<div class="cart-icon"><img src="img/cart.png" alt="cart icon" width="17px"></div>
+		</div>
+		<div class="purchased-item">
+			<div class="delete-icon"><img src="img/delete.png" alt="delete icon" width="17px"></div>
+			<div class="entered-item-text"><p>Milk</p></div>
+			<div class="cart-purchased-icon"><img src="img/cart-purchased.png" alt="cart purchased icon" width="17px"></div>
+		</div>
+	</section>
+	<footer class="footer-content">
+		<div class="footer-text">
+			<p>&copy; Jonathan DeFaveri, 2015</p>
+		</div>
+	</footer>
 </body>
 </html>

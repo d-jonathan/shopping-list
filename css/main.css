@@ -1,2 +1,64 @@
 /* font-family: 'Nunito', sans-serif; */
 
+section, header, span, div {
+  border: 1px solid Chocolate;
+}
+
+
+
+.grey-header {
+	height: 250px;
+	background-color: #C8C8C8;
+}
+
+h1, p {
+	font-family: 'Nunito', sans-serif; 
+}
+
+.header-text {
+	max-width: 250px;
+	margin: 10px auto 0 auto;
+	font-size: 32px;
+	color: #FF3300;
+	line-height: 66px;
+}
+
+
+.entry-container {
+	max-width: 350px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.entry-box {
+	width: 210px;
+	margin: 0 auto;
+	border: 3px solid #FF3300;
+	border-radius: 8px;
+	display: inline-block;
+}
+
+.entry-box p {
+	font-size: 14px;
+	font-weight: 300;
+	color: #4A4A4A;
+	line-height: 19px;
+	padding: 0 10px;
+}
+
+.add-icon {
+	display: inline-block;
+	background-image: url(../img/add.png);
+	width: 17px;
+}
+
+.fridge-list {
+	background-image: url(../img/fridge-hero.png);
+	height: 700px;
+	background-repeat: none;
+	background-size: cover;
+}
+
+.footer-content {
+	height: 150px;
+}
