@@ -1,6 +1,8 @@
 /* font-family: 'Nunito', sans-serif; */
 
-
+/*section, div, input {
+  border: 1px solid Chocolate;
+}*/
 
 .grey-header {
 	height: 250px;
@@ -35,14 +37,14 @@ h1, p {
 	display: inline-block;
 }
 
-.entry-box {
+/*.entry-box {
 	width: 210px;
 	margin: 0 auto 0 22px;
 	border-radius: 8px;
 	display: inline-block;
-}
+}*/
 
-.entry-box, .entered-item {
+/*.entry-box,*/ .entered-item {
 	border: 3px solid #FF3300;
 }
 
@@ -51,12 +53,23 @@ h1, p {
 }
 
 
-.entry-box p {
+input {
+	font-family: 'Nunito', sans-serif; 
 	font-size: 14px;
 	font-weight: 300;
 	color: #4A4A4A;
 	line-height: 19px;
-	padding: 0 10px;
+	background-color: #C8C8C8;
+	width: 210px;
+	margin: 0 auto 0 60px;
+	border-radius: 8px;
+	float: left;
+	border: 3px solid #FF3300;
+	padding: 10px;
+}
+
+input:focus{
+    outline: 0;
 }
 
 .entered-item-text {
@@ -78,11 +91,13 @@ h1, p {
 }
 
 .add-icon {
-	display: inline-block;
+	float: left;
 	background-image: url(../img/add.png);
 	background-size: 17px 17px;
 	width: 17px;
 	height: 17px;
+	margin-left: 10px;
+	margin-top: 14px;
 }
 
 .delete-icon {
