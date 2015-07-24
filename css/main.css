@@ -24,19 +24,34 @@ h1, p {
 }
 
 
-.entry-container {
+.entry-container, .entered-container, .purchased-container {
 	max-width: 350px;
 	margin: 0 auto;
 	text-align: center;
 }
 
-.entry-box {
+.entered-item, .purchased-item {
 	width: 210px;
 	margin: 0 auto;
-	border: 3px solid #FF3300;
 	border-radius: 8px;
 	display: inline-block;
 }
+
+.entry-box {
+	width: 210px;
+	margin: 0 auto 0 22px;
+	border-radius: 8px;
+	display: inline-block;
+}
+
+.entry-box, .entered-item {
+	border: 3px solid #FF3300;
+}
+
+.purchased-item {
+	border: 3px solid #6EEFBC;
+}
+
 
 .entry-box p {
 	font-size: 14px;
@@ -46,11 +61,54 @@ h1, p {
 	padding: 0 10px;
 }
 
+.entered-item-text {
+	font-size: 14px;
+	font-weight: 300;
+	color: white;
+	line-height: 19px;
+	padding: 0 10px;
+}
+
+.purchased-item-text {
+	font-size: 14px;
+	font-weight: 300;
+	color: white;
+	line-height: 19px;
+	padding: 0 10px;
+}
+
 .add-icon {
 	display: inline-block;
 	background-image: url(../img/add.png);
+	background-size: 17px 17px;
 	width: 17px;
+	height: 17px;
 }
+
+.delete-icon {
+	display: inline-block;
+	background-image: url(../img/delete.png);
+	background-size: 17px 17px;
+	width: 17px;
+	height: 17px;
+}
+
+.cart-icon {
+	display: inline-block;
+	background-image: url(../img/cart.png);
+	background-size: 17px 17px;
+	width: 17px;
+	height: 17px;
+}
+
+.cart-purchased-icon {
+	display: inline-block;
+	background-image: url(../img/cart-purchased.png);
+	background-size: 17px 17px;
+	width: 17px;
+	height: 17px;
+}
+
 
 .fridge-list {
 	background-image: url(../img/fridge-hero.png);
@@ -61,4 +119,16 @@ h1, p {
 
 .footer-content {
 	height: 150px;
+	background-color: #231E19;
+}
+
+.footer-text {
+	max-width: 350px;
+	margin: auto;
+	padding-top: 20px;
+	text-align: center;
+	font-size: 12px;
+	font-weight: 400;
+	color: #9B9B9B;
+	line-height: 16px;
 }
