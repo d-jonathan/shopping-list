@@ -16,6 +16,14 @@ $(document).ready(function(event){
 ///delete the text / reset the input box
 
 
+
+	$('.add-icon').click(function(){
+		var newItem = $('input').val()
+		//alert('Your ' + newItem + ' is going to be added!');
+	
+	});
+
+
 //mark an item as purchased
 ///on click of cart-icon  animate/ change style of li > p and container div color
 ///on click again of cart-icon change style back
@@ -26,7 +34,9 @@ $(document).ready(function(event){
 
 	$('.delete-icon').click(function(){
 		$(this).parent().remove()
-	})
+	});
+
+
 
 
 });
