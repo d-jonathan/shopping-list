@@ -7,10 +7,13 @@ $(document).ready(function(event){
 // })
 
 
+
+
 //add a new item
 ///on click of add-icon take inputs from text
 ///create a new list item > p w/ text + container divs + associated buttons
 ///insert (& animate) this new entered-item in the DOM --above ? the old items
+///delete the text / reset the input box
 
 
 //mark an item as purchased
@@ -21,6 +24,9 @@ $(document).ready(function(event){
 //delete an item
 ///on click of delete icon remove the li > p, container divs, and sibling buttons from the DOM
 
+	$('.delete-icon').click(function(){
+		$(this).parent().remove()
+	})
 
 
 });
