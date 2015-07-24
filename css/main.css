@@ -1,9 +1,5 @@
 /* font-family: 'Nunito', sans-serif; */
 
-section, header, span, div {
-  border: 1px solid Chocolate;
-}
-
 
 
 .grey-header {
@@ -17,16 +13,18 @@ h1, p {
 
 .header-text {
 	max-width: 250px;
-	margin: 10px auto 0 auto;
+	margin: auto;
 	font-size: 32px;
 	color: #FF3300;
 	line-height: 66px;
+	padding-top: 10px;
 }
 
 
 .entry-container, .entered-container, .purchased-container {
 	max-width: 350px;
 	margin: 0 auto;
+	padding: 5px 0;
 	text-align: center;
 }
 
