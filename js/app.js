@@ -1,22 +1,14 @@
 $(document).ready(function(){ 
 
-//  $('.cart-icon').click(function(event){
-//  	$(this).addClass('cart-purchased-icon');
-//  	$('.entered-item-text').addClass('purchased-item-text');
-//  	$('.entered-item').addClass('purchased-item');
-// })
-
-
-
-
 //add a new item
 ///animate insertion or deletion
 
 
 	$('.add-icon').click(function(){
 		addEnteredItem();
-		addInputText();		
-	
+		addInputText();	
+		addItemCount();	
+		$('.entered-item:first').slideDown(300);	
 	});
 
 	$(document).keydown(function ( e ) {
@@ -27,23 +19,18 @@ $(document).ready(function(){
 		}
 	});
 
- 
-
 //mark an item as purchased
-///on click of cart-icon  animate/ change style of li > p and container div color
-///on click again of cart-icon change style back
+
 
 	$('.cart-icon').click(function(event){
 //		console.log(event.target);
 		var target = $(event.target);
 		target.toggleClass('cart-purchased-icon');
 		target.siblings('.entered-item')
-		.toggleClass('purchased-item');
-	//	.parent('entered-container')
-	//	.removeClass('entered-container')
-	//	.addClass('purchased-container')
-//		updateCartIcon ();
-//		target.strikeOutText ();
+			.toggleClass('purchased-item');
+		target.siblings('.entered-item')
+			.children('.entered-item-text')
+			.toggleClass('purchased-item-text');
 	});
 
 
@@ -57,10 +44,12 @@ $(document).ready(function(){
 
 });
 
+//functions
+
 function addEnteredItem () {
 	$('.entered-container:last').show();
 	$('.entered-container:last').clone([withDataAndEvents=true])
-	.prependTo(".fridge-list");
+		.prependTo(".fridge-list");
 	$('.entered-container:last').hide();
 }
 
@@ -77,13 +66,7 @@ function addItemCount () {
 }
 
 
-function updateCartIcon () {
-	target
-	.removeClass('cart-icon')
-	.addClass('cart-purchased-icon');
-}
-
-function strikeOutText () {
-	$('.entered-item-text p')
-	.wrapInner("<s></s>");
-}
+//function strikeOutText () {
+//	$('.entered-item-text p')
+//	.wrapInner("<s></s>");
+//}

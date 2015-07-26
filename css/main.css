@@ -88,6 +88,7 @@ input:focus{
 	line-height: 19px;
 	list-style: none;
 	padding-right: 40px;
+	text-decoration: line-through;
 }
 
 .add-icon {
@@ -126,7 +127,7 @@ input:focus{
 
 
 .fridge-list {
-	background-image: url(../img/fridge-hero.png);
+	background-image: url(../img/fridge-hero-small.png);
 	height: 700px;
 	background-repeat: none;
 	background-size: cover;
