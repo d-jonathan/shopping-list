@@ -8,7 +8,7 @@ $(document).ready(function(){
 		addEnteredItem();
 		addInputText();	
 		addItemCount();	
-		$('.entered-item:first').slideDown(300);	
+		animateItemEntry();	
 	});
 
 	$(document).keydown(function ( e ) {
@@ -16,10 +16,11 @@ $(document).ready(function(){
 		addEnteredItem();
 		addInputText();	
 		addItemCount();
+		animateItemEntry();
 		}
 	});
 
-//mark an item as purchased
+//mark or unmark an item as purchased
 
 
 	$('.cart-icon').click(function(event){
@@ -39,8 +40,6 @@ $(document).ready(function(){
 	$('.delete-icon').click(function(){
 		$(this).parent().fadeOut(300)
 	});
-
-
 
 });
 
@@ -65,6 +64,11 @@ function addItemCount () {
 	$('.entered-container:first').addClass('item'+itemNumber);
 }
 
+function animateItemEntry () {
+	var itemNumber = ($('.entered-container').length - 1)
+	var itemSelect = $('.item'+itemNumber)
+	itemSelect.hide().slideDown(300);
+}
 
 //function strikeOutText () {
 //	$('.entered-item-text p')

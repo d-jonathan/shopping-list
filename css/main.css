@@ -128,7 +128,7 @@ input:focus{
 
 .fridge-list {
 	background-image: url(../img/fridge-hero-small.png);
-	height: 700px;
+	min-height: 700px;
 	background-repeat: none;
 	background-size: cover;
 }
