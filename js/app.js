@@ -18,11 +18,19 @@ $(document).ready(function(event){
 
 
 	$('.add-icon').click(function(){
-		var newItem = $('input').val()
-		//alert('Your ' + newItem + ' is going to be added!');
+		addEnteredItem();
+		addInputText();		
 	
 	});
 
+	$(document).keydown(function ( e ) {
+		if ( e.which == 13 ) {
+		addEnteredItem();
+		addInputText();	
+	}
+	});
+
+ 
 
 //mark an item as purchased
 ///on click of cart-icon  animate/ change style of li > p and container div color
@@ -33,11 +41,22 @@ $(document).ready(function(event){
 ///on click of delete icon remove the li > p, container divs, and sibling buttons from the DOM
 
 	$('.delete-icon').click(function(){
-		$(this).parent().remove()
+		$(this).parent().hide()
 	});
-
 
 
 
 });
 
+function addEnteredItem () {
+	$('.entered-container:last').show();
+	$('.entered-container:last').clone([withDataAndEvents=true]).prependTo(".fridge-list");
+	$('.entered-container:last').hide();
+}
+
+function addInputText () {
+	var newItem = $('input').val()
+	$('.entered-container:first p').text(newItem);
+	$('input').val('');
+	//alert('Your ' + newItem + ' is going to be added!');
+}
