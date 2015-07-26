@@ -1,4 +1,4 @@
-$(document).ready(function(event){ 
+$(document).ready(function(){ 
 
 //  $('.cart-icon').click(function(event){
 //  	$(this).addClass('cart-purchased-icon');
@@ -23,7 +23,8 @@ $(document).ready(function(event){
 		if ( e.which == 13 ) {
 		addEnteredItem();
 		addInputText();	
-	}
+		addItemCount();
+		}
 	});
 
  
@@ -32,16 +33,24 @@ $(document).ready(function(event){
 ///on click of cart-icon  animate/ change style of li > p and container div color
 ///on click again of cart-icon change style back
 
-	$('.cart-icon').click(function(){
-		updateCartIcon ();
+	$('.cart-icon').click(function(event){
+//		console.log(event.target);
+		var target = $(event.target);
+		target.toggleClass('cart-purchased-icon');
+		target.siblings('.entered-item')
+		.toggleClass('purchased-item');
+	//	.parent('entered-container')
+	//	.removeClass('entered-container')
+	//	.addClass('purchased-container')
+//		updateCartIcon ();
+//		target.strikeOutText ();
 	});
 
 
 //delete an item
-///on click of delete icon remove the li > p, container divs, and sibling buttons from the DOM
 
 	$('.delete-icon').click(function(){
-		$(this).parent().hide()
+		$(this).parent().fadeOut(300)
 	});
 
 
@@ -50,7 +59,8 @@ $(document).ready(function(event){
 
 function addEnteredItem () {
 	$('.entered-container:last').show();
-	$('.entered-container:last').clone([withDataAndEvents=true]).prependTo(".fridge-list");
+	$('.entered-container:last').clone([withDataAndEvents=true])
+	.prependTo(".fridge-list");
 	$('.entered-container:last').hide();
 }
 
@@ -61,8 +71,14 @@ function addInputText () {
 	//alert('Your ' + newItem + ' is going to be added!');
 }
 
+function addItemCount () {
+	var itemNumber = ($('.entered-container').length - 1)
+	$('.entered-container:first').addClass('item'+itemNumber);
+}
+
+
 function updateCartIcon () {
-	$('.entered-item').siblings('.cart-icon').slice(0,1)
+	target
 	.removeClass('cart-icon')
 	.addClass('cart-purchased-icon');
 }
